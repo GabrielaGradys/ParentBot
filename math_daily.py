@@ -166,12 +166,3 @@ class MathChecker(commands.Bot):
                              description=self.REPORTS,
                              color=0x00FF00)
         await ctx.send(embed=poll)
-
-
-intents = discord.Intents.default()
-intents.typing = False
-intents.presences = False
-
-math_bot = MathChecker(command_prefix='!', intents=intents)
-print(os.environ.get("TOKEN"))
-math_bot.run(os.getenv('TOKEN'))
